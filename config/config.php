@@ -12,20 +12,20 @@
 /* Configuaration Settings */
 global $config;
 //script url - Enter complete url inside which script folder is placed. Please note that it doesn't include the script folder
-$config["script_url"] = "http://localhost/pdocrud/";
+$config["script_url"] = "https://www.booleansolutionsenterprises.com/crud_app/";
 /************************ database ************************/
 //Set the host name to connect for database
-$config["hostname"] =  "localhost";
+$config["hostname"] =  "mysql1004.mochahost.com";
 //Set the database name
-$config["database"] = "pdocrud";
+$config["database"] = "jerlanlo_bse_www_crud_app";
 //Set the username for database access
-$config["username"] = "root";
+$config["username"] = "jerlanlo_bsecrud";
 //Set the pwd for the database user
-$config["password"] = "";
+$config["password"] = "rTm}2~VAq!.)rTm}2~VAq!.)";
 //Set the database type to be used. Available values are "mysql", "pgsql", "sqlite" and "sqlserver".
 $config["dbtype"] = "mysql";
 //Please enter purchase code. Please check how to find purchase code details here https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-
-$config["purchase_code"] = "";
+$config["purchase_code"] = "8eb8bf4b-930b-4999-a6aa-46e4e36de67d";
 //Set the character set to be used
 $config["characterset"] = "utf8";
 //Encryption and Decryption salt
