@@ -12,7 +12,7 @@
 /* Configuaration Settings */
 global $config;
 //script url - Enter complete url inside which script folder is placed. Please note that it doesn't include the script folder
-$config["script_url"] = "https://www.booleansolutionsenterprises.com/crud_app/";
+$config["script_url"] = "/crud_app/";
 /************************ database ************************/
 //Set the host name to connect for database
 $config["hostname"] =  "mysql1004.mochahost.com";
