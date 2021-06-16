@@ -7,6 +7,7 @@ $pdocrud->setSearchCols(array("user","email","role"));
 $pdocrud->crudRemoveCol(array("user_id"));
 $pdocrud->fieldTypes("photo", "FILE_NEW");
 $pdocrud->tableColFormatting("photo", "image", array("width"=>"50px"));
-$pdocrud->viewColFormatting("photo","image", array("width"=>"50%"));
+$pdocrud->viewColFormatting("photo","image", array("width"=>"35%"));
+$pdocrud->setViewColumns(array("user", "pass", "email", "role")), 
 echo $pdocrud->dbTable("users")->render();
 ?>
