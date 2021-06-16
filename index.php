@@ -6,6 +6,6 @@ $pdocrud->formDisplayInPopup();
 $pdocrud->setSearchCols(array("user","email","role"));
 $pdocrud->fieldGroups("Name1",array("user","pass"));
 $pdocrud->fieldGroups("Name2",array("email","role"));
-
+$pdocrud->crudRemoveCol(array("user_id"));
 echo $pdocrud->dbTable("users")->render();
 ?>
