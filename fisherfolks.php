@@ -9,7 +9,7 @@ $pdocrud->fieldTypes("image", "FILE_NEW");
 $pdocrud->fieldTypes("signature", "FILE_NEW");
 $pdocrud->tableColFormatting("image", "image", array("width"=>"50px"));
 $pdocrud->tableColFormatting("signature", "image", array("width"=>"50px"));
-// $pdocrud->viewColFormatting("photo","image", array("width"=>"35%"));
-// $pdocrud->setViewColumns(array("user", "pass", "email", "role","photo"));
+$pdocrud->viewColFormatting("image", "image", array("width"=>"50px"));
+$pdocrud->viewColFormatting("signature", "image", array("width"=>"50px"));   
 echo $pdocrud->dbTable("fisherfolks")->render();
 ?>
