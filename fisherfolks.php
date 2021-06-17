@@ -7,7 +7,8 @@ $pdocrud->setSearchCols(array("id_number","last_name","first_name","address","ba
 $pdocrud->crudRemoveCol(array("fisherfolks_id"));
 $pdocrud->fieldTypes("image", "FILE_NEW");
 $pdocrud->fieldTypes("signature", "FILE_NEW");
-// $pdocrud->tableColFormatting("photo", "image", array("width"=>"50px"));
+$pdocrud->tableColFormatting("image", "image", array("width"=>"50px"));
+$pdocrud->tableColFormatting("signature", "image", array("width"=>"50px"));
 // $pdocrud->viewColFormatting("photo","image", array("width"=>"35%"));
 // $pdocrud->setViewColumns(array("user", "pass", "email", "role","photo"));
 echo $pdocrud->dbTable("fisherfolks")->render();
