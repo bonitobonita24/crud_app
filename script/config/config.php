@@ -98,9 +98,9 @@ $config["closeButton"] = false;
 //whether to show "save and back" button or not, in forms
 $config["saveBackButton"] = true;
 //whether to show "back" button or not, in forms
-$config["backButton"] = true;
+$config["backButton"] = false;
 //whether to show "save and close" button or not, in forms
-$config["saveCloseButton"] = false;
+$config["saveCloseButton"] = true;
 //Position of the action buttons
 $config["actionBtnPosition"] = "right";
 //whether to show view form data in tabs or not - added in v 2.6
