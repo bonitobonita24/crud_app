@@ -42,7 +42,7 @@ $config["recordsPerPageDropdown"] = true;
 //show search box (true = show)
 $config["searchbox"] = true;
 //show delete mulitiple button (true = show)
-$config["deleteMultipleBtn"] = true;
+$config["deleteMultipleBtn"] = false;
 //show total records showing (true = show)
 $config["totalRecordsInfo"] = true;
 //show save button in crud table
@@ -74,13 +74,13 @@ $config["excelBtn"] = true;
 //show print button (true = show)
 $config["pdfBtn"] = true;
 //show multi select checkbox column (true = show)
-$config["checkboxCol"] = true;
+$config["checkboxCol"] = false;
 //show number column (true = show)
 $config["numberCol"] = true;
 //show footer row (true = show)
 $config["headerRow"] = true;
 //show footer row (true = show)
-$config["footerRow"] = true;
+$config["footerRow"] = false;
 //show filters (false = hide)
 $config["filter"] = false;
 //For dropdown, whether to show "Select" as an option or not
