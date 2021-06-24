@@ -6,7 +6,7 @@ $pdo_crud->addCallback("before_select", "beforeloginCallback");
 // after login, we generally want to save the data in session
 $pdo_crud->addCallback("after_select", "afterLoginCallBack");
 //only required fields to be display on form
-$pdo_crud->formFields(array("email", "password"));
+$pdo_crud->formFields(array("email", "pass"));
 ///redirect to some page after login (optional)
 $pdo_crud->formRedirection("https://www.booleansolutionsenterprises.com/crud_app/fisherfolks.php");
 // set db table to your user table and call render function with select form
