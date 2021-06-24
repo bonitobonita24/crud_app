@@ -1,4 +1,5 @@
 <?php
+require "script/pdocrud.php";
 $pdo_crud = new PDOCrud();
 // we need to add actions 
 // before checking the login data if you want to peform any operation like password encryption etc/(optional)
