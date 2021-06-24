@@ -14,14 +14,14 @@ $pdo_crud->formRedirection("https://www.booleansolutionsenterprises.com/crud_app
 echo $pdo_crud->dbTable("users")->render("selectform");
 
 
-// //After this add following code in script/pdocrud.php. This is basically callback functions so must be present in the script/pdocrud.php
+//After this add following code in script/pdocrud.php. This is basically callback functions so must be present in the script/pdocrud.php
 
-// //example of how to add action function
-// function beforeloginCallback($data, $obj) {  
-// //do something like if your passwords are md5 encrypted then change the value
-// $data["users"]["pass"] = md5($data["users"]["pass"]);
-// return $data;
-// }
+//example of how to add action function
+function beforeloginCallback($data, $obj) {  
+//do something like if your passwords are md5 encrypted then change the value
+$data["users"]["pass"] = md5($data["users"]["pass"]);
+return $data;
+}
 
 
 
