@@ -3,7 +3,17 @@ require "script/pdocrud.php";
 $pdocrud = new PDOCrud();
 
 $pdocrud->formFields(array("user","pass"));
-echo $pdocrud->dbTable("users")->render();
+
+$pdocrud->setUserSession("UserName","user");
+$pdocrud->setUserSession("UserId","user_id");
+$pdocrud->setUserSession("role","role_id");
+$pdocrud->setUserSession("LastLoginTime", date("now"));
+
+$pdocrud->addCallback("before_select", "beforelogincallback");
+
+$pdocrud->formRedirection("https://www.booleansolutionsenterprises.com/crud_app/fisherfolks.php", true);
+
+echo $pdocrud->dbTable("login")->render("selectform");
 
 
 ?>
