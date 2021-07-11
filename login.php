@@ -13,7 +13,7 @@ $pdocrud->addCallback("before_select", "beforelogincallback");
 
 $pdocrud->formRedirection("https://www.booleansolutionsenterprises.com/crud_app/fisherfolks.php", true);
 
-echo $pdocrud->dbTable("login")->render("selectform");
+echo $pdocrud->dbTable("user")->render("selectform");
 
 
 ?>
