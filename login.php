@@ -1,5 +1,5 @@
 <?php
-require "script/pdocrud.php";
+require_once "script/pdocrud.php";
 $pdocrud = new PDOCrud();
 
 $pdocrud->formFields(array("user","pass"));
