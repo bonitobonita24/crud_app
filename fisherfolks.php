@@ -1,5 +1,5 @@
 <?php
-require "script/pdocrud.php";
+require_once "script/pdocrud.php";
 $pdocrud = new PDOCrud(false, "", "", array("autoSuggestion" => true, "showAllSearch" => false));
 $pdocrud->dbOrderBy("last_update desc");
 // $pdocrud->formDisplayInPopup();
