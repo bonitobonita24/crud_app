@@ -34,7 +34,7 @@
             <div class="container">
                 <div class="row main-form">
                     <div class="col-sm-12">
-                        <div class="col-sm-10 col-sm-offset-2 form-box">
+                        <div class="col-sm-10 form-box">
                             <div class="form-head">
                                 <div class="form-head-left">
                                     <h3>After login form demo</h3>
