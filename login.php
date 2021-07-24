@@ -33,13 +33,13 @@
                 <a href="#" class="PDOCrud-logo"> <h3> Booleans Solutions - Fisherfolk Registration </h3></a>
             </div>
             <div class="nav form-buttons">
-                <ul class="nav navbar-nav navbar-right">
+                <!-- <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <!-- <button type="button" class="btn btn-shadow btn-primary" data-toggle="modal" data-target="#code">
+                        <button type="button" class="btn btn-shadow btn-primary" data-toggle="modal" data-target="#code">
                             View Code
-                        </button> -->
+                        </button>
                     </li>                   
-                </ul>
+                </ul> -->
             </div>
         </header>
         <div class="top-content">
@@ -72,7 +72,8 @@
                                      
                                      $pdo_crud->setUserSession("role", "role");
                                      
-                                     $pdo_crud->setUserSession("lastLoginTime", date("now"));
+                                    //  $pdo_crud->setUserSession("lastLoginTime", date("now"));
+                                    $pdo_crud->setUserSession("last_login_date", date("now"));
                                     ///redirect to some page after login (optional)-2nd parameter specify whether to redirect or not if no records found
                                      $pdo_crud->formRedirection("https://www.booleansolutionsenterprises.com/crud_app/fisherfolks.php", true);
                                     // set db table to your user table and call render function with select form
@@ -86,62 +87,6 @@
             </div>
         </div>
 
-        <!-- code Modal -->
-        <div class="modal fade bs-example-modal-lg" id="code" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Code</h4>
-                    </div>
-                    <div class="modal-body">
-                        <pre class="brush: php;">  
-                                //Login page code
-                                $pdo_crud = new PDOCrud();
-                                // (Optional step) before checking the login data if you want to peform any operation like password encryption etc/(optional)
-                                 //$pdo_crud->addCallback("before_select", "beforeloginCallback");
-                                 //only required fields to be display on form
-                                 $pdo_crud->formFields(array("email", "password"));
-                                 //set session variables - 1st parameter is the session variable name and 2nd is value to be matched in database table
-                                 $pdo_crud->setUserSession("userName", "user_name");
-                                 //You can set any no. of session variables
-                                 $pdo_crud->setUserSession("userId", "user_id");
-
-                                 $pdo_crud->setUserSession("role", "role");
-
-                                 $pdo_crud->setUserSession("lastLoginTime", date("now"));
-                                ///redirect to some page after login (optional)
-                                 $pdo_crud->formRedirection("http://localhost/pdOCrud/demo/allforms/user-access-management/after-login-page.php");
-                                // set db table to your user table and call render function with select form
-                                 echo $pdo_crud->dbTable("login")->render("selectform");
-                        </pre>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DB Modal -->
-        <div class="modal fade bs-example-modal-lg" id="dbmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Code</h4>
-                    </div>
-                    <div class="modal-body">
-                        <img src="images/dbimages/registration_1.jpg" alt="Database diagram" />
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- PHP brush scripts-->
         <script src="assets/js/shCore.js"></script>
         <script src="assets/js/shBrushPhp.js"></script>
