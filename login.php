@@ -62,7 +62,7 @@
                                     //Login page code
                                     $pdo_crud = new PDOCrud();
                                     // (Optional step) before checking the login data if you want to peform any operation like password encryption etc/(optional)
-                                     //$pdo_crud->addCallback("before_select", "beforeloginCallback");
+                                     $pdo_crud->addCallback("before_select", "beforeloginCallback");
                                      //only required fields to be display on form
                                      $pdo_crud->formFields(array("email", "password"));
                                      //set session variables - 1st parameter is the session variable name and 2nd is value to be matched in database table
