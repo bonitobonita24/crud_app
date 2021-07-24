@@ -45,22 +45,22 @@
                             </div>
                             <div class="form-content">
                                 <?php
-                                $pdo_crud = new PDOCrud(false, "", "", array("autoSuggestion" => true, "showAllSearch" => false));
-                                $pdo_crud->dbOrderBy("last_update desc");
+                                $pdocrud = new PDOCrud(false, "", "", array("autoSuggestion" => true, "showAllSearch" => false));
+                                $pdocrud->dbOrderBy("last_update desc");
                                 // $pdocrud->formDisplayInPopup();
-                                $pdo_crud->setSearchCols(array("id_number","last_name","first_name","address","batch_code","modified_by","last_update"));
-                                $pdo_crud->crudRemoveCol(array("fisherfolks_id"));
-                                $pdo_crud->fieldTypes("image", "FILE_NEW");
-                                $pdo_crud->fieldTypes("signature", "FILE_NEW");
-                                $pdo_crud->tableColFormatting("image", "image", array("width"=>"50px"));
-                                $pdo_crud->tableColFormatting("signature", "image", array("width"=>"50px"));
-                                $pdo_crud->viewColFormatting("image", "image", array("width"=>"50px"));
-                                $pdo_crud->viewColFormatting("signature", "image", array("width"=>"50px"));
+                                $pdocrud->setSearchCols(array("id_number","last_name","first_name","address","batch_code","modified_by","last_update"));
+                                $pdocrud->crudRemoveCol(array("fisherfolks_id"));
+                                $pdocrud->fieldTypes("image", "FILE_NEW");
+                                $pdocrud->fieldTypes("signature", "FILE_NEW");
+                                $pdocrud->tableColFormatting("image", "image", array("width"=>"50px"));
+                                $pdocrud->tableColFormatting("signature", "image", array("width"=>"50px"));
+                                $pdocrud->viewColFormatting("image", "image", array("width"=>"50px"));
+                                $pdocrud->viewColFormatting("signature", "image", array("width"=>"50px"));
 
-                                if ($pdo_crud->checkUserSession("userId")) {
-                                    if ($pdo_crud->checkUserSession("role", array("admin", "author", "editor"))) {
-                                        echo "Welcome ".$pdo_crud->getUserSession("userName");
-                                        echo $pdo_crud->dbTable("fisherfolks")->render();
+                                if ($pdocrud->checkUserSession("userId")) {
+                                    if ($pdocrud->checkUserSession("role", array("admin", "author", "editor"))) {
+                                        echo "Welcome ".$pdocrud->getUserSession("userName");
+                                        echo $pdocrud->dbTable("fisherfolks")->render();
                                     }
                                     else{
                                     echo "You don't have sufficient permission to access this page.";

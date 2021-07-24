@@ -61,11 +61,11 @@
                                 <div class="form-content">
                                     <?php
                                      //Logout  page code
-                                     $pdo_crud = new PDOCrud();                               
+                                     $pdocrud = new PDOCrud();                               
                                      //set session variables - 1st parameter is the session variable name and 2nd is value to be matched in database table
-                                     $pdo_crud->unsetUserSession("userName");
+                                     $pdocrud->unsetUserSession("userName");
                                      //or you can unset all user session variable set by setUserSession function
-                                      $pdo_crud->unsetUserSession();
+                                      $pdocrud->unsetUserSession();
 
                                     ?>
                                 </div>
@@ -87,12 +87,12 @@
                     <div class="modal-body">
                         <pre class="brush: php;">  
                                      //Logout  page code
-                                     $pdo_crud = new PDOCrud();
+                                     $pdocrud = new PDOCrud();
                                
                                      //set session variables - 1st parameter is the session variable name and 2nd is value to be matched in database table
-                                     $pdo_crud->unsetUserSession("userName");
+                                     $pdocrud->unsetUserSession("userName");
                                      //or you can unset all user session variable set by setUserSession function
-                                      $pdo_crud->unsetUserSession();
+                                      $pdocrud->unsetUserSession();
                         </pre>
                     </div>
                     <div class="modal-footer">
