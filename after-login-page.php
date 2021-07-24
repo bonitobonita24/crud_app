@@ -39,8 +39,11 @@
                                 <div class="form-head-left">
                                     <h3>FMO Fisherfolk Registration App</h3>
                                     <?php
-$date->setTimezone(new DateTimeZone('Asia/Manila'));
-echo $date->format('Y-m-d H:i:sP') . "\n";
+                                    $date = new DateTime('2000-01-01', new DateTimeZone('Pacific/Nauru'));
+                                    echo $date->format('Y-m-d H:i:sP') . "\n";
+
+                                    $date->setTimezone(new DateTimeZone('Pacific/Chatham'));
+                                    echo $date->format('Y-m-d H:i:sP') . "\n";
                                     ?>
                                 </div>
                                 <div class="form-head-right">
