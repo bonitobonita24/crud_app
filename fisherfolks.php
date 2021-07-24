@@ -1,4 +1,4 @@
-<?php require_once "script/pdocrud.php"; ?>
+<?php require_once "../script/pdocrud.php"; ?>
 
 <?php
 $pdocrud = new PDOCrud(false, "", "", array("autoSuggestion" => true, "showAllSearch" => false));

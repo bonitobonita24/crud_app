@@ -1,4 +1,4 @@
-<?php require_once "script/pdocrud.php"; 
+<?php require_once "../script/pdocrud.php"; 
 //Login page code
 $pdo_crud = new PDOCrud();
 // (Optional step) before checking the login data if you want to peform any operation like password encryption etc/(optional)
