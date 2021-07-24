@@ -39,8 +39,20 @@
                                 <div class="form-head-left">
                                     <h3>FMO Fisherfolk Registration App</h3>
                                     <?php
-                                        $date = new DateTime(new DateTimeZone('Asia/Manila'));
-                                        echo $date->format('Y-m-d H:i:sP') . "\n";
+function UTCTimeToLocalTime($time, $tz = '', $FromDateFormat = 'Y-m-d H:i:s', $ToDateFormat = 'Y-m-d H:i:s')
+{
+if ($tz == '')
+    $tz = date_default_timezone_get();
+
+$utc_datetime = DateTime::createFromFormat($FromDateFormat, $time, new
+    DateTimeZone('UTC'));
+$local_datetime = $utc_datetime;
+
+$local_datetime->setTimeZone(new DateTimeZone($tz));
+return $local_datetime->format($ToDateFormat);
+}
+
+ echo UTCTimeToLocalTime('2015-07-01 13:30:00','America/Denver');
                                     ?>
                                 </div>
                                 <div class="form-head-right">
