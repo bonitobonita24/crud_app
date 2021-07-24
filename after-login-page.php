@@ -29,47 +29,40 @@
 
     </head>
     <body>
-        <header>
-            <div class="heading">
-                <a href="#" class="PDOCrud-logo"> <h3> Title Here </h3></a>
-            </div>
-        </header>
-        <!-- <div class="top-content"> -->
-            <!-- <div class="inner-bg"> -->
-                <div class="container">
-                    <div class="row main-form">
-                        <div class="col-sm-12">
-                            <div class="col-sm-10 col-sm-offset-2 form-box">
-                                <div class="form-head">
-                                    <div class="form-head-left">
-                                        <h3>After login form demo</h3>
-                                    </div>
-                                    <div class="form-head-right">
-                                        <i class="fa fa-pencil"></i>
-                                    </div> 
+        
+        
+            <div class="container">
+                <div class="row main-form">
+                    <div class="col-sm-12">
+                        <div class="col-sm-10 col-sm-offset-2 form-box">
+                            <div class="form-head">
+                                <div class="form-head-left">
+                                    <h3>After login form demo</h3>
                                 </div>
-                                <div class="form-content">
-                                    <?php
-                                    $pdo_crud = new PDOCrud();
-                                    if ($pdo_crud->checkUserSession("userId")) {
-                                        if ($pdo_crud->checkUserSession("role", array("admin", "author", "editor"))) {
-                                            echo "Welcome ".$pdo_crud->getUserSession("userName");
-                                            echo $pdo_crud->dbTable("fisherfolks")->render();
-                                        }
-                                        else{
-                                        echo "You don't have sufficient permission to access this page.";
-                                        }
-                                    } else {
-                                        echo "You are not allowed to access this page. Please login to access page";
+                                <div class="form-head-right">
+                                    <i class="fa fa-pencil"></i>
+                                </div> 
+                            </div>
+                            <div class="form-content">
+                                <?php
+                                $pdo_crud = new PDOCrud();
+                                if ($pdo_crud->checkUserSession("userId")) {
+                                    if ($pdo_crud->checkUserSession("role", array("admin", "author", "editor"))) {
+                                        echo "Welcome ".$pdo_crud->getUserSession("userName");
+                                        echo $pdo_crud->dbTable("fisherfolks")->render();
                                     }
-                                    ?>
-                                </div>
+                                    else{
+                                    echo "You don't have sufficient permission to access this page.";
+                                    }
+                                } else {
+                                    echo "You are not allowed to access this page. Please login to access page";
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
                 </div>
-            <!-- </div> -->
-        <!-- </div> -->
+            </div>
 
         
         <!-- PHP brush scripts-->
