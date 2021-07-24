@@ -25,7 +25,7 @@
 
         <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 
-        <title>PDOCrud - Checking session and access of user form</title>
+        <title>BSE - FMO Fisherfolk Registration App</title>
 
     </head>
     <body>
@@ -37,7 +37,7 @@
                         <div class="col-md-10 col-md-offset-1 form-box">
                             <div class="form-head">
                                 <div class="form-head-left">
-                                    <h3>After login form demo</h3>
+                                    <h3>FMO Fisherfolk Registration App</h3>
                                 </div>
                                 <div class="form-head-right">
                                     <i class="fa fa-pencil"></i>
@@ -45,7 +45,18 @@
                             </div>
                             <div class="form-content">
                                 <?php
-                                $pdo_crud = new PDOCrud();
+                                $pdo_crud = new PDOCrud(false, "", "", array("autoSuggestion" => true, "showAllSearch" => false));
+                                $pdocrud->dbOrderBy("last_update desc");
+                                // $pdocrud->formDisplayInPopup();
+                                $pdocrud->setSearchCols(array("id_number","last_name","first_name","address","batch_code","modified_by","last_update"));
+                                $pdocrud->crudRemoveCol(array("fisherfolks_id"));
+                                $pdocrud->fieldTypes("image", "FILE_NEW");
+                                $pdocrud->fieldTypes("signature", "FILE_NEW");
+                                $pdocrud->tableColFormatting("image", "image", array("width"=>"50px"));
+                                $pdocrud->tableColFormatting("signature", "image", array("width"=>"50px"));
+                                $pdocrud->viewColFormatting("image", "image", array("width"=>"50px"));
+                                $pdocrud->viewColFormatting("signature", "image", array("width"=>"50px"));
+                                
                                 if ($pdo_crud->checkUserSession("userId")) {
                                     if ($pdo_crud->checkUserSession("role", array("admin", "author", "editor"))) {
                                         echo "Welcome ".$pdo_crud->getUserSession("userName");
