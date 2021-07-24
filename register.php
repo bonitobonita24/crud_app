@@ -46,50 +46,7 @@
                     </div>
                     <div class="row main-form">
                        
-                        <div class="col-sm-5">
-                            
-                            <div class="form-box">
-                                <div class="form-top">
-                                <?php 
-                            
-                            $pdocrud = new PDOCrud();
-                            $pdocrud->formStaticFields("personalinfo", "html", "<div class='form-top-left'><h3>Login to our site</h3><p>Enter username and password to log on:</p></div>");
-                            $pdocrud->formStaticFields("personalinfo1", "html", "<div class='form-top-right'><i class='fa fa-key'></i></div>");
-
-                            $pdocrud->fieldDisplayOrder(array("personalinfo","personalinfo1"));
-                            $pdocrud->formFields(array("personalinfo","personalinfo1","user_name", "password"));
-                            
-                          //  $pdocrud->formFields(array("user_name", "password"));
-                            
-
-                            $pdocrud->fieldAttributes("user_name", array("placeholder"=>"Username"));//add placeholder attribute
-                            $pdocrud->fieldAttributes("password", array("placeholder"=>"Password"));//add placeholder attribute
-                           
-                            $pdocrud->fieldHideLable("user_name");// Hide label
-                            $pdocrud->fieldHideLable("password");// Hide label
-                           
-
-                            $pdocrud->buttonHide("cancel");// Hide button
-                            $pdocrud->setLangData("save", "Sign in!");
-
-                            $pdocrud->fieldCssClass("user_name", array("form-first-name"));// add class 
-                            $pdocrud->fieldCssClass("password", array("form-first-name"));// add class 
-                           
-                            $pdocrud->enqueueCss("font-awesome.min", "http://localhost/formdoid/demo/moreforms/form1/assets/font-awesome/css/font-awesome.min.css");
-
-                            $pdocrud->enqueueCss("form-elements", "http://localhost/formdoid/demo/moreforms/form1/assets/css/form-elements.css");
-                            $pdocrud->enqueueCss("style", "http://localhost/formdoid/demo/moreforms/form1/assets/css/style.css");
-
-                            echo $pdocrud->dbTable("login")->render("insertform");
-                            
-                            ?>
-                                </div>
-
-                            </div>
-
-                            
-
-                        </div>
+                    
                         
                         <div class="col-sm-1 middle-border"></div>
                         <div class="col-sm-1"></div>
@@ -143,78 +100,7 @@
             </div>
         </div>
 
-        <!-- code Modal -->
-        <div class="modal fade bs-example-modal-lg" id="code" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Code</h4>
-                    </div>
-                    <div class="modal-body">
-                        <pre class="brush: php;">  
-                                 $pdocrud = new PDOCrud();
-
-                                /* Add static fields (html texts, confirm password and terms & condition) */
-                                $pdocrud->formStaticFields("personalinfo", "html", "<h3>Join Us!! </h3><br><p>Fill in the form below to get instant access:</p>");
-                               
-                                /* Show particular fields */
-                                $pdocrud->formFields(array("personalinfo","personalinfo1","first_name", "last_name", "email","hobbies","about_yourself"));
-
-                                /* Hide particular label */
-                                $pdocrud->fieldHideLable("first_name");// Hide label
-                                $pdocrud->fieldHideLable("last_name");// Hide label
-                                $pdocrud->fieldHideLable("email");// Hide label
-
-                                /* Add multiselect field */
-                                $pdocrud->fieldTypes("hobbies","multiselect");// add multiselect field
-                                $pdocrud->fieldDataBinding("hobbies", array("games"=>"Games","drama"=>"Drama","art"=>"Art"), "", "","array");// multiselect options
-                               
-                               /* Display field order */
-                                $pdocrud->fieldDisplayOrder(array("personalinfo"));
-
-                                /* Cancel button hide */
-                                $pdocrud->buttonHide("cancel");// Hide button
-
-                                /* Enqueue css  */
-                                $pdocrud->enqueueCss("style", "http://localhost/formdoid/demo/moreforms/form1/assets/css/style.css");
-                                $pdocrud->enqueueCss("form-elements", "http://localhost/formdoid/demo/moreforms/form1/assets/css/form-elements.css");
-
-                                /* Edit save button text */
-                                $pdocrud->setLangData("save", "Sign me up!");
-
-                                /* Add class on particular element */
-                                $pdocrud->fieldCssClass("first_name", array("form-first-name"));//add placeholder attribute
-
-                                echo $pdocrud->dbTable("users")->render();
-                        </pre>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DB Modal -->
-        <div class="modal fade bs-example-modal-lg" id="dbmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Code</h4>
-                    </div>
-                    <div class="modal-body">
-                        <img src="images/dbimages/registration_1.jpg" alt="Database diagram" />
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+ 
         <!-- PHP brush scripts-->
         <script src="assets/js/shCore.js"></script>
         <script src="assets/js/shBrushPhp.js"></script>
