@@ -38,6 +38,11 @@
                             <div class="form-head">
                                 <div class="form-head-left">
                                     <h3>FMO Fisherfolk Registration App</h3>
+                                    <?php
+                                    $date = new DateTime('now');
+                                    $date->modify('+1 day');
+                                    echo $date->format('Y-m-d');
+                                    ?>
                                 </div>
                                 <div class="form-head-right">
                                     <i class="fa fa-pencil"></i>
@@ -58,11 +63,8 @@
                                 $pdocrud->viewColFormatting("signature", "image", array("width"=>"50px"));
                                 $loggedinuser = $pdocrud->getUserSession("userName");
                                 $pdocrud->formFieldValue("modified_by", "$loggedinuser");
-                                $dateDiff = "12 hours";
-                                $interval = DateInterval::createFromDateString($dateDiff);
-                                $date = new DateTime("2013-03-05 00:00:00+00");
-                                $date->add($interval);
-                                $pdocrud->formFieldValue("last_update", "$date");
+                                $today = date("Y-m-d H:i T");
+                                $pdocrud->formFieldValue("last_update", "$today");
 
                                 if ($pdocrud->checkUserSession("userId")) {
                                     if ($pdocrud->checkUserSession("role", array("admin", "author", "editor"))) {
