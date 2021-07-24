@@ -58,6 +58,7 @@
                                 $pdocrud->viewColFormatting("signature", "image", array("width"=>"50px"));
                                 $loggedinuser = $pdocrud->getUserSession("userName");
                                 $pdocrud->formFieldValue("modified_by", "$loggedinuser");
+                                $date->setTimezone(new DateTimeZone('Asia/Manila'));
                                 $pdocrud->formFieldValue("last_update", date('Y-m-d H:i:s'));
 
                                 if ($pdocrud->checkUserSession("userId")) {
