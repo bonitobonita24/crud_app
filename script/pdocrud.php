@@ -22,7 +22,7 @@ if (isset($_REQUEST["pdocrud_instance"])) {
 
 //example of how to add action function
 function beforeloginCallback($data, $obj) {  
-    $data["email"]["password"] = md5($data["email"]["password"]);
+    $data["users"]["password"] = md5($data["users"]["password"]);
     return $data;
 }
  

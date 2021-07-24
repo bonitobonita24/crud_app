@@ -73,7 +73,7 @@
                                      $pdo_crud->setUserSession("role", "role");
                                      
                                     //  $pdo_crud->setUserSession("lastLoginTime", date("now"));
-                                    $pdo_crud->setUserSession("lastLoginTime", date("now"));
+                                    $pdo_crud->setUserSession("last_login_date", date("now"));
                                     ///redirect to some page after login (optional)-2nd parameter specify whether to redirect or not if no records found
                                      $pdo_crud->formRedirection("https://www.booleansolutionsenterprises.com/crud_app/after-login-page.php", true);
                                     // set db table to your user table and call render function with select form
