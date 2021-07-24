@@ -9,10 +9,10 @@
         <meta content="PDOCrud is an advance PHP based CRUD(Create, Read, Update and Delete) application. It supports Mysql, Pgsql and Sqlite database." name="description" />
          <!-- Page specific CSS to improve design of the form. This script is not about writing css to create beautiful forms, it is generating the form from
         database directly with minimal lines of code.-->
-        <link href="../assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
-        <link href="../assets/css/form-elements.css" rel="stylesheet"/>
-        <link href="../assets/css/signup-form.css" rel="stylesheet"/>
-        <link href="../assets/css/style.css" rel="stylesheet"/>
+        <link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="assets/css/form-elements.css" rel="stylesheet"/>
+        <link href="assets/css/signup-form.css" rel="stylesheet"/>
+        <link href="assets/css/style.css" rel="stylesheet"/>
 
 
 
