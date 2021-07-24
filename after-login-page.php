@@ -60,7 +60,7 @@
                                 if ($pdo_crud->checkUserSession("userId")) {
                                     if ($pdo_crud->checkUserSession("role", array("admin", "author", "editor"))) {
                                         echo "Welcome ".$pdo_crud->getUserSession("userName");
-                                        echo $pdo_crud->dbTable("fisherfolks")->render();
+                                        echo $pdo_crud->dbTable("fisherfolks")->render("ONEPAGE");
                                     }
                                     else{
                                     echo "You don't have sufficient permission to access this page.";
