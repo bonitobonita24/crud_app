@@ -61,7 +61,7 @@
                                     <?php
                                     $pdo_crud = new PDOCrud();
                                     if ($pdo_crud->checkUserSession("userId")) {
-                                        if ($pdo_crud->checkUserSession("role", array("admins", "author", "editor"))) {
+                                        if ($pdo_crud->checkUserSession("role", array("admin", "author", "editor"))) {
                                             echo "Welcome ".$pdo_crud->getUserSession("userName");
                                             echo $pdo_crud->dbTable("employee")->render();
                                         }
