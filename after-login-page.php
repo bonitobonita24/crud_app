@@ -40,10 +40,10 @@
                                     <h3>FMO Fisherfolk Registration App</h3>
                                     <?php
                                     $date = new DateTime('2000-01-01', new DateTimeZone('Pacific/Nauru'));
-                                    echo $date->format('Y-m-d H:i:sP') . "\n";
                                     
+
                                     $date->setTimezone(new DateTimeZone('Asia/Manila'));
-                                    echo $date->format('Y-m-d H:i:sP') . "\n";
+                                    echo $date->format('Y-m-d H:i:s') . "\n";
                                     ?>
                                 </div>
                                 <div class="form-head-right">
