@@ -40,7 +40,7 @@
                                     <h3>FMO Fisherfolk Registration App</h3>
                                     <?php
                                     $date = new DateTime('now');
-                                    $date->modify('+1 day');
+                                    $date->modify('+12 hours');
                                     echo $date->format('Y-m-d H:i');
                                     ?>
                                 </div>
