@@ -58,8 +58,11 @@
                                 $pdocrud->viewColFormatting("signature", "image", array("width"=>"50px"));
                                 $loggedinuser = $pdocrud->getUserSession("userName");
                                 $pdocrud->formFieldValue("modified_by", "$loggedinuser");
-                                $today = date("Y-m-d H:i T");
-                                $pdocrud->formFieldValue("last_update", "$today");
+                                $dateDiff = "12 hours";
+                                $interval = DateInterval::createFromDateString($dateDiff);
+                                $date = new DateTime("2013-03-05 00:00:00+00");
+                                $date->add($interval);
+                                $pdocrud->formFieldValue("last_update", "$date");
 
                                 if ($pdocrud->checkUserSession("userId")) {
                                     if ($pdocrud->checkUserSession("role", array("admin", "author", "editor"))) {
