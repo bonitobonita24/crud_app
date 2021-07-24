@@ -39,21 +39,8 @@
                                 <div class="form-head-left">
                                     <h3>FMO Fisherfolk Registration App</h3>
                                     <?php
-function timezoneDifferenceInSec( $source_timezone, $required_timezone){
-    $a = explode(":",$source_timezone);
-    $b = explode(":",$required_timezone);
-    $c = (intval($a[0])*60+intval($a[1]))*60;
-    $d = (intval($b[0])*60+intval($b[1]))*60;
-    $diffsec =0;
-    if($c < $d)
-        $diffsec = $d-$c;
-    else
-        $diffsec = $c-$d;
-    return $diffsec;
-    }
-
-//function call
-$differenc = timezoneDifferenceInSec("-07:00", "+05:30");
+$date->setTimezone(new DateTimeZone('Asia/Manila'));
+echo $date->format('Y-m-d H:i:sP') . "\n";
                                     ?>
                                 </div>
                                 <div class="form-head-right">
