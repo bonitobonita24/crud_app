@@ -64,7 +64,7 @@
                                         if ($pdo_crud->checkUserSession("role", array("admin", "author", "editor"))) {
                                             echo "Welcome ".$pdo_crud->getUserSession("userName");
                                             echo $pdo_crud->dbTable("employee")->render();
-                                            $pdo_crud->unsetUserSession("userName");
+                                            
                                         }
                                         else{
                                         echo "You don't have sufficient permission to access this page.";
