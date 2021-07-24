@@ -1,4 +1,4 @@
-<?php require_once "../script/pdocrud.php"; ?>
+<?php require_once "script/pdocrud.php"; ?>
 <!DOCTYPE html>
 <html>
     <head>
