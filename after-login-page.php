@@ -48,7 +48,7 @@
                                 $pdo_crud = new PDOCrud(false, "", "", array("autoSuggestion" => true, "showAllSearch" => false));
                                 $pdo_crud->dbOrderBy("last_update desc");
                                 // $pdocrud->formDisplayInPopup();
-                                $pdocrud->setSearchCols(array("id_number","last_name","first_name","address","batch_code","modified_by","last_update"));
+                                $pdo_crud->setSearchCols(array("id_number","last_name","first_name","address","batch_code","modified_by","last_update"));
                                 $pdo_crud->crudRemoveCol(array("fisherfolks_id"));
                                 $pdo_crud->fieldTypes("image", "FILE_NEW");
                                 $pdo_crud->fieldTypes("signature", "FILE_NEW");
