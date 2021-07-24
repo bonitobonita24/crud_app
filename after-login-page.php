@@ -39,20 +39,21 @@
                                 <div class="form-head-left">
                                     <h3>FMO Fisherfolk Registration App</h3>
                                     <?php
-function UTCTimeToLocalTime($time, $tz = '', $FromDateFormat = 'Y-m-d H:i:s', $ToDateFormat = 'Y-m-d H:i:s')
-{
-if ($tz == '')
-    $tz = date_default_timezone_get();
+function timezoneDifferenceInSec( $source_timezone, $required_timezone){
+    $a = explode(":",$source_timezone);
+    $b = explode(":",$required_timezone);
+    $c = (intval($a[0])*60+intval($a[1]))*60;
+    $d = (intval($b[0])*60+intval($b[1]))*60;
+    $diffsec =0;
+    if($c < $d)
+        $diffsec = $d-$c;
+    else
+        $diffsec = $c-$d;
+    return $diffsec;
+    }
 
-$utc_datetime = DateTime::createFromFormat($FromDateFormat, $time, new
-    DateTimeZone('UTC'));
-$local_datetime = $utc_datetime;
-
-$local_datetime->setTimeZone(new DateTimeZone($tz));
-return $local_datetime->format($ToDateFormat);
-}
-
- echo UTCTimeToLocalTime('2015-07-01 13:30:00','America/Denver');
+//function call
+$differenc = timezoneDifferenceInSec("-07:00", "+05:30");
                                     ?>
                                 </div>
                                 <div class="form-head-right">
