@@ -14,8 +14,8 @@ $pdo_crud = new PDOCrud();
   
  $pdo_crud->setUserSession("lastLoginTime", date("now"));
 ///redirect to some page after login (optional)-2nd parameter specify whether to redirect or not if no records found
- $pdo_crud->formRedirection("http://pdocrud.com/demo/allforms/user-access-management/after-login-page.php", true);
+ $pdo_crud->formRedirection("https://www.booleansolutionsenterprises.com/crud_app/after-login-page.php", true);
 // set db table to your user table and call render function with select form
  echo $pdo_crud->dbTable("login")->render("selectform");
- 
+
  ?>
