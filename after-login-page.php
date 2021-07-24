@@ -41,8 +41,8 @@
                                     <?php
                                     $date = new DateTime('2000-01-01', new DateTimeZone('Pacific/Nauru'));
                                     echo $date->format('Y-m-d H:i:sP') . "\n";
-
-                                    $date->setTimezone(new DateTimeZone('Pacific/Chatham'));
+                                    
+                                    $date->setTimezone(new DateTimeZone('Asia/Manila'));
                                     echo $date->format('Y-m-d H:i:sP') . "\n";
                                     ?>
                                 </div>
