@@ -35,9 +35,9 @@
             <div class="nav form-buttons">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <button type="button" class="btn btn-shadow btn-primary" data-toggle="modal" data-target="#code">
+                        <!-- <button type="button" class="btn btn-shadow btn-primary" data-toggle="modal" data-target="#code">
                             View Code
-                        </button>
+                        </button> -->
                     </li>                   
                 </ul>
             </div>
