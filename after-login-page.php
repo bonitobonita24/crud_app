@@ -60,11 +60,12 @@
                                 <div class="form-content">
                                     <?php
                                     $pdo_crud = new PDOCrud();
+                                    $pdo_crud->unsetUserSession("userName");
+                                    $pdo_crud->unsetUserSession();
                                     if ($pdo_crud->checkUserSession("userId")) {
                                         if ($pdo_crud->checkUserSession("role", array("admin", "author", "editor"))) {
                                             echo "Welcome ".$pdo_crud->getUserSession("userName");
                                             echo $pdo_crud->dbTable("employee")->render();
-                                            
                                         }
                                         else{
                                         echo "You don't have sufficient permission to access this page.";
@@ -81,54 +82,7 @@
             </div>
         </div>
 
-        <!-- code Modal -->
-        <div class="modal fade bs-example-modal-lg" id="code" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Code</h4>
-                    </div>
-                    <div class="modal-body">
-                        <pre class="brush: php;">  
-                                    $pdo_crud = new PDOCrud();
-                                    if ($pdo_crud->checkUserSession("userId")) {
-                                        if ($pdo_crud->checkUserSession("role", array("admin", "author", "editor"))) {
-                                            echo "Welcome ".$pdo_crud->getUserSession("userName");
-                                            echo $pdo_crud->dbTable("employee")->render();
-                                        }
-                                        echo "You don't have sufficient permission to access this page.";
-                                    } else {
-                                        echo "You are not allowed to access this page.";
-                                    }
-                        </pre>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DB Modal -->
-        <div class="modal fade bs-example-modal-lg" id="dbmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Code</h4>
-                    </div>
-                    <div class="modal-body">
-                        <img src="images/dbimages/registration_1.jpg" alt="Database diagram" />
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <!-- PHP brush scripts-->
         <script src="assets/js/shCore.js"></script>
         <script src="assets/js/shBrushPhp.js"></script>
