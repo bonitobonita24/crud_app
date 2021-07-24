@@ -39,7 +39,7 @@
                                 <div class="form-head-left">
                                     <h3>FMO Fisherfolk Registration App</h3>
                                     <?php
-                                        $date = new DateTime('2000-01-01', new DateTimeZone('Pacific/Nauru'));
+                                        $date = new DateTime(new DateTimeZone('Asia/Manila'));
                                         echo $date->format('Y-m-d H:i:sP') . "\n";
                                     ?>
                                 </div>
