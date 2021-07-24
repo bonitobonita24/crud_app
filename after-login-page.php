@@ -31,24 +31,15 @@
     <body>
         <header>
             <div class="heading">
-                <a href="#" class="PDOCrud-logo"> <h3> PDOCrud - After login data demo </h3></a>
-            </div>
-            <div class="nav form-buttons">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <button type="button" class="btn btn-shadow btn-primary" data-toggle="modal" data-target="#code">
-                            View Code
-                        </button>
-                    </li>                   
-                </ul>
+                <a href="#" class="PDOCrud-logo"> <h3> Title Here </h3></a>
             </div>
         </header>
-        <div class="top-content">
-            <div class="inner-bg">
+        <!-- <div class="top-content"> -->
+            <!-- <div class="inner-bg"> -->
                 <div class="container">
                     <div class="row main-form">
                         <div class="col-sm-12">
-                            <div class="col-sm-8 col-sm-offset-2 form-box">
+                            <div class="col-sm-10 col-sm-offset-2 form-box">
                                 <div class="form-head">
                                     <div class="form-head-left">
                                         <h3>After login form demo</h3>
@@ -77,8 +68,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> -->
 
         
         <!-- PHP brush scripts-->
