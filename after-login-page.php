@@ -56,8 +56,8 @@
                                 $pdocrud->tableColFormatting("signature", "image", array("width"=>"50px"));
                                 $pdocrud->viewColFormatting("image", "image", array("width"=>"50px"));
                                 $pdocrud->viewColFormatting("signature", "image", array("width"=>"50px"));
-
-                                $pdocrud->formFieldValue("modified_by", "testdata");
+                                $loggedinuser = $pdocrud->getUserSession("userName");
+                                $pdocrud->formFieldValue("modified_by", "$loggedinuser");
 
                                 if ($pdocrud->checkUserSession("userId")) {
                                     if ($pdocrud->checkUserSession("role", array("admin", "author", "editor"))) {
