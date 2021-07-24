@@ -9,7 +9,10 @@
         <meta content="PDOModel is a Database abstraction and helper class for PHP and Mysql, PDSql, SQLite database operations. It provides various simple functions to perform database related operation like insert, delete, update, selection without writing any queries." name="description" />
         <!-- Page specific CSS to improve design of the form. This script is not about writing css to create beautiful forms, it is generating the form from
         database directly with minimal lines of code.-->
-        <link rel="stylesheet" href="assets/css/signup-form.css">
+        <link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="assets/css/form-elements.css" rel="stylesheet"/>
+        <link href="assets/css/signup-form.css" rel="stylesheet"/>
+        <link href="assets/css/style.css" rel="stylesheet"/>
         
         <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
         
