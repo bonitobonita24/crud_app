@@ -60,8 +60,6 @@
                                 <div class="form-content">
                                     <?php
                                     $pdo_crud = new PDOCrud();
-                                    $pdo_crud->unsetUserSession("userName");
-                                    $pdo_crud->unsetUserSession();
                                     if ($pdo_crud->checkUserSession("userId")) {
                                         if ($pdo_crud->checkUserSession("role", array("admin", "author", "editor"))) {
                                             echo "Welcome ".$pdo_crud->getUserSession("userName");
