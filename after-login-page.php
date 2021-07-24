@@ -41,7 +41,7 @@
                                     <?php
                                     $date = new DateTime('now');
                                     $date->modify('+1 day');
-                                    echo $date->format('Y-m-d');
+                                    echo $date->format('Y-m-d H:i');
                                     ?>
                                 </div>
                                 <div class="form-head-right">
