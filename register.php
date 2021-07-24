@@ -135,7 +135,7 @@
                                 $pdocrud->enqueueCss("form-elements", "http://localhost/formdoid/demo/moreforms/form1/assets/css/form-elements.css");
                                 $pdocrud->enqueueCss("style", "http://localhost/formdoid/demo/moreforms/form1/assets/css/style.css");
                                 
-                                echo $pdocrud->dbTable("users")->render("insertform");
+                                echo $pdocrud->dbTable("login")->render("insertform");
                                 
                                 ?>
                                 </div>
