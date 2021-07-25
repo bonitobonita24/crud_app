@@ -60,7 +60,7 @@
                                 $pdocrud->formFieldValue("modified_by", "$loggedinuser");
                                 $today = date("Y-m-d H:i", strtotime('+12 hours'));
                                 $pdocrud->formFieldValue("last_update", "$today");
-                                $pdocrud->fieldDataAttr("last_update", array("disabled"=>"disabled"));
+                                $pdocrud->fieldDataAttr("last_update", array("hidden"=>"hidden"));
                                
 
                                 if ($pdocrud->checkUserSession("userId")) {
